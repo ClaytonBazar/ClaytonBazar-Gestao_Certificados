@@ -1,3 +1,3 @@
 <?php
-    require_once '../../Gestao_Certificados/controller/InstituicaoController.php';
+    require_once '../Gestao_Certificados/Gestao_Certificado/controller/'
 ?>
