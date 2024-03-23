@@ -1,15 +1,15 @@
 <?php
 
     class Conexao{
-        private $host = 'localhost';
-        private $dbname = 'gestaocertificado';
+        private $server = 'CLAYTON';
+        private $dbname = 'certificados';
         private $user = 'root';
         private $pass = '<3/clay70N';
 
         public function conect(){
             try {
                 $conexao = new PDO(
-                    "mysql:host=$this->host;dbname=$this->dbname",
+                    "sqlsrv:server=$this->server;dbname=$this->dbname",
                     $this -> user,
                     $this -> pass
                 );

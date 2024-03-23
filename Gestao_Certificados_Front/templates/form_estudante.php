@@ -14,12 +14,6 @@
             <input type="date" name="dataNascimento" id="">
             <label for="">ano de Conclusao</label>
             <input type="text" name="anoConclusao" id="">
-            <label for="">Numero de Pauta</label>
-            <input type="text" name="numPauta" id="">
-            <label for="">Codigo de Certificado</label>
-            <input type="text" name="idCertificado" id="">
-            <label for="">Instituicao</label>
-            <input type="text" name="idInstituicao" id="">
             <input type="submit" value="Enviar">
         </div>
     </form>

@@ -8,6 +8,7 @@ print_r($_POST);
 echo '</pre>';
 
      $certificado = new Certificado();
+     
      $certificado -> __set('numpauta',$_POST['numpauta']);
      $certificado -> __set('ano',$_POST['ano']);
      

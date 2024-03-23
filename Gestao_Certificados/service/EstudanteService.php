@@ -15,14 +15,12 @@ class EstudanteService{
     }
 
     public function insert(){ // create
-        $query = 'insert into estudante(nome, nascimento, ano_conclusao, numpauta,is_certificado,id_instituicao) values(:nomeEstudante,:dataNascimento,:anoConclusao,:numPauta,:idCertificado,:idInstituicao)';
+        $query = 'insert into estudante(nome, nascimento, ano_conclusao) values(:nomeEstudante,:dataNascimento,:anoConclusao)';
         $stmt = $this ->conexao->prepare($query);
         $stmt ->bindValue(':nomeEstudante', $this->estudante->__get('nome'));
         $stmt ->bindValue(':dataNascimento', $this->estudante->__get('nascimento'));
         $stmt ->bindValue(':anoConclusao', $this->estudante->__get('anoConclusao'));
-        $stmt ->bindValue(':numPauta', $this->estudante->__get('numPauta'));
-        $stmt ->bindValue(':idCertificado', $this->estudante->__get('idCertificado'));
-        $stmt ->bindValue(':idInstituicao', $this->estudante->__get('idInstituicao'));
+
         $stmt->execute();
     }
    

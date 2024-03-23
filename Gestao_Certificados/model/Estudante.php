@@ -4,10 +4,6 @@ class Estudante{
     private String $nome;
     private String $nascimento;
     private String $anoConclusao;
-    private int $numPauta;
-    private int $idCertificado;
-    private int $idInstituicao;
-
 
 
     //getters setters
