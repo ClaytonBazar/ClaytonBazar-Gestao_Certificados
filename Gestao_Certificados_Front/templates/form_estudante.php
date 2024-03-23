@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="../controller/Estudantecontroller.php">>
+    <form method="post" action="../controller/Estudantecontroller.php?acao=inserir">>
         <div>
             <label for="">Nome do Aluno</label>
             <input type="text" name="nomeAluno" id="">

@@ -1,3 +1,8 @@
+<?php
+    $acao = 'recuperar';
+    require '../controller/Estudantecontroller.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../controller/CertificadoController.php?acao=inserir">
-
     
-    </form>
 </body>
 </html>

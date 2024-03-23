@@ -10,7 +10,7 @@
 <?if(isset($_GET['inclusao']) && $_GET['inclusao'] == 1){ ?>
 <div style="background: green;color:white;"> <h5>Instituicao inserida com sucesso</h5>  
 <? } ?>
-    <form method="post" action="../controller/InstituicaoController.php">
+    <form method="post" action="../controller/InstituicaoController.php?acao=inserir">
 
     </div>
         <div>

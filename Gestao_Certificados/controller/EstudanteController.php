@@ -4,11 +4,10 @@
     require "../../Gestao_Certificados/service/EstudanteService.php";
     require "../../Gestao_Certificados/conexao/conexao.php";
 
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
+$acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
     //Estudante
+    if($acao == 'inserir'){
     $estudante = new Estudante();
     $estudante -> __set('nome', $_POST['nomeAluno']);
     $estudante -> __set('nascimento',$_POST['dataNascimento']);
@@ -18,9 +17,8 @@
     $estudanteService = new EstudanteService($conexao,$estudante);
     $estudanteService->insert();
 
-    
-echo '<pre>';
-print_r($estudanteService);
-echo '</pre>';
+    }else if($acao == 'recuperar'){
+        echo 'Chegamos ate aqui';
+    }
 
 ?>

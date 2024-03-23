@@ -3,9 +3,10 @@
      require "../../Gestao_Certificados/service/CertificadoService.php";
      require "../../Gestao_Certificados/conexao/conexao.php";
 
-     echo '<pre>';
-print_r($_POST);
-echo '</pre>';
+     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
+
+     //Estudante
+     if($acao == 'inserir'){
 
      $certificado = new Certificado();
      
@@ -15,4 +16,5 @@ echo '</pre>';
      $conexao = new Conexao();
      $certificadoService = new CertificadoService($conexao,$certificado);
      $certificadoService->insert();
+     }
 ?>

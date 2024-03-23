@@ -3,10 +3,10 @@
      require "../../Gestao_Certificados/service/NotasService.php";
      require "../../Gestao_Certificados/conexao/conexao.php";
 
-     echo '<pre>';
-print_r($_POST);
-echo '</pre>';
+     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
+     //Notas
+     if($acao == 'inserir'){
      $notas = new Notas();
      $notas ->__set('portugues',$_POST['portugues']);
      $notas ->__set('matematica',$_POST['matematica']);
@@ -22,4 +22,4 @@ echo '</pre>';
      $conexao = new Conexao();
      $notasService = new NotasService($conexao,$notas);
      $notasService->insert();
-?>
+     }

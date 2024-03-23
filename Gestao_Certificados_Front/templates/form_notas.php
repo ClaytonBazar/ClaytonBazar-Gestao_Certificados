@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="../controller/Notascontroller.php">
+    <form method="post" action="../controller/Notascontroller.php?acao=inserir">
         <div>
             <label for="">Portugues</label>
             <input type="text" name="portugues" id="">
