@@ -14,12 +14,12 @@
             <div id="logo"><a href="">Museu Nacional</a></div>
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Instituicao</a></li>
-                    <li><a href="">Estudantes</a></li>
-                    <li><a href="">Notas</a></li>
-                    <li><a href="">Certificados</a></li>
-                    <li><a href="">Sobre</a></li>
+                    <li><a href="../templates/index.php">Home</a></li>
+                    <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
+                    <li><a href="../templates/form_estudante.php">Estudantes</a></li>
+                    <li><a href="../templates/form_estudante.php">Notas</a></li>
+                    <li><a href="../templates/listagem_instituicao.php">Certificados</a></li>
+                    <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
         </header>
@@ -84,7 +84,7 @@
             </p>
 
             <p>
-                2024 <a href="">Escolar Certificados</a> - Todos os direitos reservados pelo MINEDH
+                2024 <a href="../templates/index.php">Escolar Certificados</a> - Todos os direitos reservados pelo MINEDH
             </p>
      </footer>
 </div>
