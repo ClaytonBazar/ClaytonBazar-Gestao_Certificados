@@ -21,10 +21,53 @@
                 </ul>
             </nav>
         </header>
-</div>
-    <form action="../controller/CertificadoController.php?acao=inserir">
-
+<div class="front">
     
-    </form>
+        <form action="../controller/CertificadoController.php?acao=inserir">
+    
+    
+        </form>
+</div>
+    <aside>
+        <h3>Direccao do Ministerio</h3>
+        <section>
+            <div>         
+            <img src="" alt="">
+            <h4>Carmelita Namashulua</h4>
+            <p>Ministra da Educacao e Desenvolvimento Humano</p>
+            </div>
+        </section>
+        <section>
+            <div>      
+            <img src="" alt="">
+            <h4>Manuel Bazo</h4>
+            <p>Vice-Ministro da Educacao e Desenvolvimento Humano</p>
+            </div>
+        </section>
+        <section>
+            <div>   
+            <img src="" alt="">
+            <h4>Artur Dondo</h4>
+            <p>Secretario Permanente</p>
+            </div>
+        </section>
+    </aside>
+
+
+    <footer>
+            <p>
+            <a href="../templates/index.php">Home</a>
+            <a href="../templates/form_instituicao.php">Instituicao</a>
+            <a href="../templates/form_estudante.php">Estudantes</a>
+            <a href="../templates/form_notas.php">Notas</a>
+            <a href="../templates/listagem_certificado.php">Certificados</a>
+            <a href="">Sobre</a>
+            </p>
+
+            <p>
+                2024 <a href="">Escolar Certificados</a> - Todos os direitos reservados pelo MINEDH
+            </p>
+     </footer>
+     </div>
 </body>
 </html>
