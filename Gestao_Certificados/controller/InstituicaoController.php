@@ -22,5 +22,13 @@ $instituicaoService = new InstituicaoService($conexao,$instituicao);
 $instituicaoService->insert();
 
 header('Location:../template/form_instituicao.php?inclusao=1');
+}else if($acao == 'recuperar'){
+        
+    $instituicao = new Instituicao();
+    $conexao = new Conexao();
+
+    $instituicaoService = new InstituicaoService($conexao,$instituicao);
+    $instituicaoService ->recover();
+
 }
 ?>

@@ -22,4 +22,12 @@
      $conexao = new Conexao();
      $notasService = new NotasService($conexao,$notas);
      $notasService->insert();
-     }
+     }else if($acao == 'recuperar'){
+        
+          $notas = new Notas();
+          $conexao = new Conexao();
+  
+          $notasService = new NotasService($conexao,$notas);
+          $notasService ->recover();
+  
+      }

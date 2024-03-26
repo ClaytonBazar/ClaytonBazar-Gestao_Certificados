@@ -18,7 +18,13 @@ $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
     $estudanteService->insert();
 
     }else if($acao == 'recuperar'){
-        echo 'Chegamos ate aqui';
+        
+        $estudante = new Estudante();
+        $conexao = new Conexao();
+
+        $estudanteService = new EstudanteService($conexao,$tarefa);
+        $estudanteService ->recover();
+
     }
 
 ?>

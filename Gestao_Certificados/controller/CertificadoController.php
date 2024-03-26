@@ -16,5 +16,13 @@
      $conexao = new Conexao();
      $certificadoService = new CertificadoService($conexao,$certificado);
      $certificadoService->insert();
-     }
+     }else if($acao == 'recuperar'){
+        
+          $certificado = new Certificado();
+          $conexao = new Conexao();
+  
+          $certificadoService = new CertificadoService($conexao,$certificado);
+          $certificadoService ->recover();
+  
+      }
 ?>

@@ -14,7 +14,7 @@ class CertificadoService{
     }
 
     public function insert(){
-
+        
     }
 
     public function recover(){
