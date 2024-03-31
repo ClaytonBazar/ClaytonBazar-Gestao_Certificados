@@ -1,3 +1,7 @@
+<?php
+$acao = 'recuperar';
+require '../controller/CertificadoController.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

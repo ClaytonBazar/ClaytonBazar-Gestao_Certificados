@@ -1,6 +1,6 @@
 <?php
     $acao = 'recuperar';
-    require '../controller/Estudantecontroller.php'
+    require '../controller/Estudantecontroller.php';
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +27,14 @@
             </nav>
         </header>
         <div class="front">
+        <h2>Todos os estudantes</h2>
+        <?foreach($estudante as $estud){?>
+            <div class="listagem">
+                <h3><?= $estud -> nome?> </h3>
+                <p><?=$estud -> nascimento?></p>
+                <p><?=$estud-> anoConclusao?></p>
+            </div>
+      <?}?>
 
         </div>
         <aside>

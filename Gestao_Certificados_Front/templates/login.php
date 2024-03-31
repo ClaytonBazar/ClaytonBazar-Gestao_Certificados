@@ -11,7 +11,7 @@
     <div id="container">
         <img src="../img/download.png" alt="">
 
-        <form action="../controller/InstituicaoController.php">
+        <form action=".">
             <div>
                 <input type="text" name="email" id="email" placeholder="Digite o Nome da Instituicao">
             </div>
@@ -19,11 +19,11 @@
                 <input type="password" name="senha" id="email" placeholder="Digite a senha">
             </div>
             <div>
-                <input class="submit" type="submit" Value="Logar">
+            <button><a href="index.php">Log in</a></button>
             </div>
 
             <div>
-                <button><a href="formularios.html">Sign in</a></button>
+                <button><a href="form_instituicao.php">Sign in</a></button>
             </div>
         </form>
     </div>

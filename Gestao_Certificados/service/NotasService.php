@@ -16,7 +16,7 @@ class NotasService{
 
     public function insert(){
         
-        $query = 'insert into notas(portugues,matematica,quimica,biologia,fisica,geografia,ignles,historia,frances,filosofia) values(:portugues,:matematica,:quimica,:biologia,:fisica,:geografia,:ingles,:historia,:frances,:filosofia)';
+        $query = 'insert into notas(portugues,matematica,quimica,biologia,fisica,geografia,ingles,historia,frances,filosofia) values(:portugues,:matematica,:quimica,:biologia,:fisica,:geografia,:ingles,:historia,:frances,:filosofia)';
         $stmt = $this -> conexao -> prepare($query);
         $stmt -> bindValue(':portugues', $this->notas->__get('portugues'));
         $stmt -> bindValue(':matematica', $this->notas->__get('matematica'));

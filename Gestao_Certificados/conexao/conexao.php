@@ -1,25 +1,28 @@
 <?php
 
     class Conexao{
-        private $server = 'CLAYTON';
-        private $dbname = 'certificados';
+        private $serverName = "CLAYTON";
+        private $conectionOptions = "certificados";
         private $user = '';
         private $pass = '';
 
         public function conect(){
             try {
                 $conexao = new PDO(
-                    "sqlsrv:server=$this->server;Database=$this->dbname",
-                    $this -> user,
-                    $this -> pass
-                    
-                );
+                    "sqlsrv:server=$this->serverName;Database=$this->conectionOptions",
+                    $this->user,
+                    $this ->pass);
+
+                
+
+                    $conexao ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
 
                 return $conexao;
-                echo '<p>conectado com sucesso<p>';
+                
                 
             }catch(PDOException $e){
-                echo '<p>' . $e -> getMessage() . '<p>';
+                die(print_r($e -> getMessage()));
             }
         }
     }

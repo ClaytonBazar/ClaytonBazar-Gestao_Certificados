@@ -24,7 +24,10 @@ class InstituicaoService{
     }
    
    public function recover(){
-   
+        $query = 'select nome,provincia from instituicao';
+        $stmt = $this ->conexao->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
    }
    
    public function update(){

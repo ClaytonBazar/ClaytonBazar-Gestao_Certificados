@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +27,8 @@
         </header>
 
     <div class="front">
+
+
         <form method="post" action="../controller/InstituicaoController.php?acao=inserir">
             <fieldset id="instituicao">
                 <Legend>Nova Instituicao</Legend>

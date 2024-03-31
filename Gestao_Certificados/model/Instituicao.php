@@ -1,8 +1,8 @@
 <?php
 class Instituicao{
 private int $id;
-private String $nomeInstituicao;
-private String $provincia;
+private  $nomeInstituicao;
+private  $provincia;
 
     
 

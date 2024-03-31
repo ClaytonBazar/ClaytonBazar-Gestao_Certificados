@@ -15,7 +15,7 @@ class EstudanteService{
     }
 
     public function insert(){ // create
-        $query = 'insert into estudante(nome, nascimento, ano_conclusao) values(:nomeEstudante,:dataNascimento,:anoConclusao)';
+        $query = 'insert into estudante(nome, nascimento,ano_conclusao) values(:nomeEstudante,:dataNascimento,:anoConclusao)';
         $stmt = $this ->conexao->prepare($query);
         $stmt ->bindValue(':nomeEstudante', $this->estudante->__get('nome'));
         $stmt ->bindValue(':dataNascimento', $this->estudante->__get('nascimento'));
@@ -25,7 +25,7 @@ class EstudanteService{
     }
    
    public function recover(){ //read
-    $query = 'nome,nascimento,ano_conclusao from Estudante';
+    $query = 'select nome,nascimento,ano_conclusao from Estudante';
     $stmt = $this ->conexao->prepare($query);
     $stmt -> execute();
     return $stmt -> fetchAll(PDO::FETCH_OBJ);

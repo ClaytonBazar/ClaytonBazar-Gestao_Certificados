@@ -7,7 +7,7 @@
 $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
     //Estudante
-    if($acao == 'inserir'){
+   if($acao == 'inserir'){
     $estudante = new Estudante();
     $estudante -> __set('nome', $_POST['nomeAluno']);
     $estudante -> __set('nascimento',$_POST['dataNascimento']);
@@ -22,8 +22,8 @@ $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
         $estudante = new Estudante();
         $conexao = new Conexao();
 
-        $estudanteService = new EstudanteService($conexao,$tarefa);
-        $estudanteService ->recover();
+        $estudanteService = new EstudanteService($conexao,$estudante);
+        $estudante = $estudanteService ->recover();
 
     }
 

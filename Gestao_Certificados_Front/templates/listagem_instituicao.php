@@ -1,3 +1,8 @@
+<?php
+$acao = 'recuperar';
+require '../controller/InstituicaoController.php';
+$instituicao = new Instituicao;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +29,13 @@
         </header>
 
         <div class="front">
-
-        </div>
+            <h2>Todas instituicoes</h2>
+        <? foreach($instituicao as $indice -> $instituicao) { ?>
+            <div class="listagem">
+                <h3><?= $instituicao -> nomeInstituicao?> </h3>
+                <p><?=$instituicao -> provincia?></p>
+            </div>
+      <?}?>
 
         <aside>
         <h3>Direccao do Ministerio</h3>

@@ -11,14 +11,14 @@ body {
   margin-bottom: 20px;
 }
 
-a:link,
+nav ul li a:link,
 a:active,
 a:visited {
   color: #af670a;
   text-decoration: none;
 }
 
-a:hover {
+nav ul li a:hover {
   color: #f4f2ec;
 }
 
@@ -64,6 +64,10 @@ nav ul li a:hover {
 .front {
   width: 710px;
   float: left;
+}
+
+.front a {
+  color: black;
 }
 
 aside {
@@ -185,4 +189,12 @@ fieldset #instituicao{
 fieldset #instituicao input[type="text"]{
   width: 300px;
   height: 20px;
+}
+
+.listagem{
+  background-color: blue;
+  color: white;
+  width: 700px;
+  height: 200px;
+  margin: 10px;
 }

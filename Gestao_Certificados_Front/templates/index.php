@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
 <body>
     <div id="container">
         <header> 
-            <div id="logo"><a href="">Museu Nacional</a></div>
+            <div id="logo"><a href="">Escolar Certificados</a></div>
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
@@ -22,7 +23,7 @@
             </nav>
         </header>
 
-        <div style="background-color: red; height: 150px;">
+        <div style="background-color: red; height: 200px; margin-top: 10px;">
            <img src="" alt="">
         </div>
 
@@ -59,13 +60,13 @@
       <div id="services">
         <div >
           <h2>Listagem das Instituicoes</h2>
-          <a href="">
+          <a href="listagem_instituicao.php">
           <div class="box">
             <h3>Listagem das instituicoes</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus incidunt odit nisi qui, amet dicta impedit totam architecto harum libero illum vel aspernatur hic facilis ipsa, nihil veniam quod rerum.</p>
           </div>
           </a>
-          <a  href="">
+          <a  href="listagem_certificado.php">
           <div class="box">
             <h3>Listagem de Certificados</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dicta sunt laborum dolorem adipisci impedit. Repellat obcaecati, exercitationem optio rem atque eum sapiente esse voluptate quibusdam, nesciunt culpa perferendis quis!</p>
