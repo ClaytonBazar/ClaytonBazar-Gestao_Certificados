@@ -27,7 +27,8 @@
 <div class="front">
     
         <form method="post" action="../controller/Notascontroller.php?acao=inserir">
-            <div>
+            <fieldset>
+                <legend>Notas do Estudante</legend>
                 <label for="">Portugues</label>
                 <input type="text" name="portugues" id="">
     
@@ -59,7 +60,7 @@
                 <input type="text" name="filosofia" id="">
     
                 <input type="submit" value="Enviar">
-            </div>
+            </fieldset>
         </form>
 </div>
     <aside>

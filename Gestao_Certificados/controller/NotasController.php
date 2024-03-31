@@ -3,8 +3,7 @@
      require "../../Gestao_Certificados/service/NotasService.php";
      require "../../Gestao_Certificados/conexao/conexao.php";
 
-   
-     $acao = isset($_Get['acao']) ? $_GET['acao'] : $acao;
+     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
      //Notas
      if($acao == 'inserir'){
      $notas = new Notas();

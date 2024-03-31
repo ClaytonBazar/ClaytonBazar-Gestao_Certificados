@@ -34,7 +34,7 @@ require '../controller/InstituicaoController.php';
 
             <div class="listagem">
 
-            <h3><?= $institut -> nome ?></h3>
+            <h3><?= $institut -> nome_instituicao ?></h3>
 
             <p><?= $institut->provincia ?></p>
 

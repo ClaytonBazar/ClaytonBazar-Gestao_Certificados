@@ -16,7 +16,7 @@ class InstituicaoService{
 
 
     public function insert(){
-        $query = 'insert into instituicao(nome,provincia) values(:nomeInstituicao,:provincia)';
+        $query = 'insert into instituicao(nome_instituicao,provincia) values(:nomeInstituicao,:provincia)';
         $stmt = $this ->conexao->prepare($query);
         $stmt ->bindValue(':nomeInstituicao', $this->instituicao->__get('nomeInstituicao'));
         $stmt ->bindValue(':provincia', $this->instituicao->__get('provincia'));
@@ -24,7 +24,7 @@ class InstituicaoService{
     }
    
    public function recover(){
-        $query = 'select nome,provincia from instituicao';
+        $query = 'select nome_instituicao,provincia from instituicao';
         $stmt = $this ->conexao->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
