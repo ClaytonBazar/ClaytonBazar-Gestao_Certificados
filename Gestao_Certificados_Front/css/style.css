@@ -182,19 +182,19 @@ select {
   margin: 15px 0;
 }
 
-fieldset #instituicao{
+fieldset #instituicao {
   width: 400px;
 }
 
-fieldset #instituicao input[type="text"]{
+fieldset #instituicao input[type="text"] {
   width: 300px;
   height: 20px;
 }
 
-.listagem{
+div .listagem {
   background-color: blue;
   color: white;
-  width: 700px;
-  height: 200px;
+  width: 550px;
+  height: 150px;
   margin: 10px;
 }

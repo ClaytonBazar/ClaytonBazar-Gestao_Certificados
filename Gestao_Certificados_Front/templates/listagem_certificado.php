@@ -19,18 +19,27 @@ require '../controller/CertificadoController.php';
                     <li><a href="../templates/index.php">Home</a></li>
                     <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
-                    <li><a href="../templates/form_estudante.php">Notas</a></li>
+                    <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
         </header>
 <div class="front">
-    
-        <form action="../controller/CertificadoController.php?acao=inserir">
-    
-    
-        </form>
+        <?php foreach ($certificado as $certificad): ?>
+
+        <div class="listagem">
+
+        <h3><?= $certificad -> nome ?></h3>
+
+        <p><?= $certificad->nascimento ?></p>
+
+        <p><?= $certificad->nome_instituicao ?></p>
+        <p>Matematica: <?= $certificad -> matematica?></p>
+
+        </div>
+
+        <?php endforeach; ?>
 </div>
     <aside>
         <h3>Direccao do Ministerio</h3>

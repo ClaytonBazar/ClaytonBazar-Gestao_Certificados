@@ -20,7 +20,7 @@
                     <li><a href="../templates/index.php">Home</a></li>
                     <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
-                    <li><a href="../templates/form_estudante.php">Notas</a></li>
+                    <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
@@ -28,13 +28,22 @@
         </header>
         <div class="front">
         <h2>Todos os estudantes</h2>
-        <?foreach($estudante as $estud){?>
-            <div class="listagem">
-                <h3><?= $estud -> nome?> </h3>
-                <p><?=$estud -> nascimento?></p>
-                <p><?=$estud-> anoConclusao?></p>
-            </div>
-      <?}?>
+ 
+        <?php foreach ($estudante as $estudant): ?>
+
+        <div class="listagem">
+
+        <h3><?= $estudant -> nome ?></h3>
+
+        <p><?= $estudant->nascimento ?></p>
+
+        <p><?= $estudant->ano_conclusao ?></p>
+
+        </div>
+
+        <?php endforeach; ?>
+
+
 
         </div>
         <aside>

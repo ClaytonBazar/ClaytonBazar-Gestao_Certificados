@@ -1,7 +1,7 @@
 <?php
 $acao = 'recuperar';
 require '../controller/InstituicaoController.php';
-$instituicao = new Instituicao;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,13 +30,18 @@ $instituicao = new Instituicao;
 
         <div class="front">
             <h2>Todas instituicoes</h2>
-        <? foreach($instituicao as $indice -> $instituicao) { ?>
-            <div class="listagem">
-                <h3><?= $instituicao -> nomeInstituicao?> </h3>
-                <p><?=$instituicao -> provincia?></p>
-            </div>
-      <?}?>
+            <?php foreach ($instituicao as $institut): ?>
 
+            <div class="listagem">
+
+            <h3><?= $institut -> nome ?></h3>
+
+            <p><?= $institut->provincia ?></p>
+
+            </div>
+
+            <?php endforeach; ?>
+            </div>
         <aside>
         <h3>Direccao do Ministerio</h3>
         <section>

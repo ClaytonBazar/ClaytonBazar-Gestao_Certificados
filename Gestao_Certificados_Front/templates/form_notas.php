@@ -18,7 +18,7 @@
                     <li><a href="../templates/index.php">Home</a></li>
                     <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
-                    <li><a href="../templates/form_estudante.php">Notas</a></li>
+                    <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>

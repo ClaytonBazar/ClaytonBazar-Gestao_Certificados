@@ -22,7 +22,8 @@
           $conexao = new Conexao();
   
           $certificadoService = new CertificadoService($conexao,$certificado);
-          $certificadoService ->recover();
+          $certificado = $certificadoService ->recover();
+          
   
       }
 ?>
