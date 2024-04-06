@@ -12,6 +12,8 @@ if($acao == 'inserir'){
 $instituicao = new Instituicao();
 $instituicao -> __set('nomeInstituicao', $_POST['nomeInstituicao']);
 $instituicao -> __set('provincia',$_POST['provincia']);
+$instituicao -> __set('email',$_POST['email']);
+$instituicao -> __set('password',$_POST['password']);
 
 $conexao = new Conexao();
 

@@ -24,12 +24,14 @@ class EstudanteService{
         $stmt->execute();
     }
    
-   public function recover(){ //read
+   public function recover(){ //select
     $query = 'select nome,nascimento,ano_conclusao from Estudante';
     $stmt = $this ->conexao->prepare($query);
     $stmt -> execute();
     return $stmt -> fetchAll(PDO::FETCH_OBJ);
    }
+
+
    
    public function update(){  //update
    

@@ -3,6 +3,8 @@ class Instituicao{
 private int $id;
 private  $nomeInstituicao;
 private  $provincia;
+private $email;
+private $password;
 
     
 

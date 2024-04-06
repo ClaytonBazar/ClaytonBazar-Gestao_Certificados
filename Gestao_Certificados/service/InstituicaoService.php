@@ -16,10 +16,12 @@ class InstituicaoService{
 
 
     public function insert(){
-        $query = 'insert into instituicao(nome_instituicao,provincia) values(:nomeInstituicao,:provincia)';
+        $query = 'insert into instituicao(nome_instituicao,provincia,email,password) values(:nomeInstituicao,:provincia,:email,:password)';
         $stmt = $this ->conexao->prepare($query);
         $stmt ->bindValue(':nomeInstituicao', $this->instituicao->__get('nomeInstituicao'));
         $stmt ->bindValue(':provincia', $this->instituicao->__get('provincia'));
+        $stmt ->bindValue(':email', $this->instituicao->__get('email'));
+        $stmt ->bindValue(':password', $this->instituicao->__get('passwrod'));
         $stmt->execute();
     }
    

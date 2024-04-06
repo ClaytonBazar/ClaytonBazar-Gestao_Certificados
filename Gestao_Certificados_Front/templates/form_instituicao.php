@@ -41,10 +41,12 @@
                 <input type="text" name="provincia" id="">
                 </div>
                 <div>
-                    <select>
-                        <option value="Escola Primaria">Escola Primaria</option>
-                        <option value="Escola Secundaria">Escola Secundaria</option>
-                    </select>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="">
+                </div>
+                <div>
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="">
                 </div>
                 <input type="submit" value="Enviar">
 
