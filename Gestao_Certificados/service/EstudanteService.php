@@ -15,11 +15,13 @@ class EstudanteService{
     }
 
     public function insert(){ // create
-        $query = 'insert into estudante(nome, nascimento,ano_conclusao) values(:nomeEstudante,:dataNascimento,:anoConclusao)';
+        session_start();
+        $query = 'insert into estudante(nome, nascimento,ano_conclusao,id_instituicao) values(:nomeEstudante,:dataNascimento,:anoConclusao,:id_instituicao)';
         $stmt = $this ->conexao->prepare($query);
         $stmt ->bindValue(':nomeEstudante', $this->estudante->__get('nome'));
         $stmt ->bindValue(':dataNascimento', $this->estudante->__get('nascimento'));
         $stmt ->bindValue(':anoConclusao', $this->estudante->__get('anoConclusao'));
+        $stmt ->bindValue(':id_instituicao', $_SESSION['id']);
 
         $stmt->execute();
     }
@@ -29,6 +31,8 @@ class EstudanteService{
     $stmt = $this ->conexao->prepare($query);
     $stmt -> execute();
     return $stmt -> fetchAll(PDO::FETCH_OBJ);
+
+
    }
 
 

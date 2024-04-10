@@ -30,6 +30,34 @@ $instituicaoService->insert();
     $instituicaoService = new InstituicaoService($conexao,$instituicao);
    $instituicao = $instituicaoService ->recover();
 
+} else if($acao == 'autenticar'){
+
+    $instituicao = new Instituicao();
+    $instituicao -> __set('email',$_POST['email']);
+    $instituicao -> __set('password',$_POST['password']);
+    
+    $conexao = new Conexao();
+    
+    $instituicaoService = new InstituicaoService($conexao,$instituicao);
+
+
+
+    $retorno = $instituicaoService->autenticar();
+    
+    if($instituicao->__get('id') != '' && $instituicao->__get('nome_instituicao')){
+
+        session_start();
+
+        $_SESSION['id'] = $instituicao->__get('id');
+        $_SESSION['nome_instituicao'] = $instituicao->__get('nome_instituicao');
+
+        header('Location: ../templates/index.php');
+        
+     
+    }else{
+       echo 'Dados invalidos';
+    }
+
 }
 
 ?>

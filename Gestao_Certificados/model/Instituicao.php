@@ -1,6 +1,6 @@
 <?php
 class Instituicao{
-private int $id;
+private  $id;
 private  $nomeInstituicao;
 private  $provincia;
 private $email;

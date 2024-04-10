@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/form_style.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <div id="container">
         <img src="../img/download.png" alt="">
 
-        <form action=".">
+        <form method="POST" action = "../controller/InstituicaoController.php?acao=autenticar">
             <div>
-                <input type="text" name="email" id="email" placeholder="Digite o Nome da Instituicao">
+                <input type="text" name="email" id="" placeholder="Digite o Email da Instituicao">
             </div>
             <div>
-                <input type="password" name="senha" id="email" placeholder="Digite a senha">
+                <input type="password" name="password" id="" placeholder="Digite a senha">
             </div>
             <div>
-            <button><a href="index.php">Log in</a></button>
+            <button type="submit"><a href="">Log in</a></button>
+            
             </div>
-
+    <br>
             <div>
                 <button><a href="form_instituicao.php">Sign in</a></button>
             </div>
