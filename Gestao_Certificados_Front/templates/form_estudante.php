@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>Formulario do Estudante</title>
 </head>
 <body>
 <div id="container">
@@ -15,7 +15,6 @@
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
-                    <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
                     <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
@@ -25,7 +24,7 @@
         </header>
 <div class="front">
     
-        <form method="post" action="../controller/Estudantecontroller.php?acao=inserir">>
+        <form method="post" action="../controller/Estudantecontroller.php?acao=inserir">
             <fieldset>
                 <Legend>Dados do estudante</Legend>
                 <div>
@@ -40,62 +39,6 @@
                     <label for="anoConclusao">ano de Conclusao</label>
                     <input type="text" name="anoConclusao" id="anoConclusao" placeholder="Ex: 2021">
                 </div>
-                <input type="submit" value="Enviar">
-            </fieldset>
-        </form>
-        <form method="post" action="../controller/Notascontroller.php?acao=inserir">
-            <fieldset>
-                <legend>Notas do Estudante</legend>
-                <div>
-                    <label for="">Portugues</label>
-                    <input type="text" name="portugues" id="" placeholder="ex: 15">
-                </div>
-    
-                <div>
-                    <label for="">Matematica</label>
-                    <input type="text" name="matematica" id="">
-                </div>
-    
-                <div>
-                    <label for="">Quimica</label>
-                    <input type="text" name="quimica" id="">
-                </div>
-    
-                <div>
-                    <label for="">Biologia</label>
-                    <input type="text" name="biologia" id="">
-                </div>
-    
-                <div>
-                    <label for="">Fisica</label>
-                    <input type="text" name="fisica" id="">
-                </div>
-
-                <div>
-                    <label for="">Geografia</label>
-                    <input type="text" name="geografia" id="">
-                </div>
-    
-                <div>
-                    <label for="">Ingles</label>
-                    <input type="text" name="ingles" id="">
-                </div>
-    
-                <div>
-                    <label for="">Historia</label>
-                    <input type="text" name="historia" id="">
-                </div>
-    
-                <div>
-                    <label for="">Frances</label>
-                    <input type="text" name="frances" id="">
-                </div>
-    
-                <div>
-                    <label for="">Filosofia</label>
-                    <input type="text" name="filosofia" id="">
-                </div>
-    
                 <input type="submit" value="Enviar">
             </fieldset>
         </form>

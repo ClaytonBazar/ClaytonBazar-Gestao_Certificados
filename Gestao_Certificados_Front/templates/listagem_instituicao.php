@@ -19,7 +19,7 @@ require '../controller/InstituicaoController.php';
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
-                    <li><a href="../templates/index.php">Instituicao</a></li>
+
                     <li><a href="form_estudante.php">Estudantes</a></li>
                     <li><a href="form_estudante.php">Notas</a></li>
                     <li><a href="listagem_certificado.php">Certificados</a></li>

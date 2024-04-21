@@ -24,6 +24,12 @@
           $certificadoService = new CertificadoService($conexao,$certificado);
           $certificado = $certificadoService ->recover();
           
+     }else if($acao == 'recuperarunico'){
+          $certificado = new Certificado();
+          $conexao = new Conexao();
   
-      }
+          $certificadoService = new CertificadoService($conexao,$certificado);
+          $certificado = $certificadoService ->recoverById();
+  }
+      
 ?>

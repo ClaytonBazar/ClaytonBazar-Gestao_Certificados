@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "../../Gestao_Certificados/model/Instituicao.php";
 require "../../Gestao_Certificados/service/InstituicaoService.php";
 require "../../Gestao_Certificados/conexao/conexao.php";
@@ -19,6 +19,7 @@ $conexao = new Conexao();
 
 $instituicaoService = new InstituicaoService($conexao,$instituicao);
 $instituicaoService->insert();
+header('Location: ../templates/login.php');
 
 
 
@@ -46,12 +47,12 @@ $instituicaoService->insert();
     
     if($instituicao->__get('id') != '' && $instituicao->__get('nome_instituicao')){
 
-        session_start();
+
 
         $_SESSION['id'] = $instituicao->__get('id');
         $_SESSION['nome_instituicao'] = $instituicao->__get('nome_instituicao');
-
         header('Location: ../templates/index.php');
+
         
      
     }else{

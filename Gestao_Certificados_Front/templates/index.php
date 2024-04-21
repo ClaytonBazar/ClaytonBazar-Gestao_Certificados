@@ -14,7 +14,6 @@
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
-                    <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
                     <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
@@ -48,7 +47,7 @@
                 tempore labore ipsam sit eaque, minima perferendis. Deserunt,
                 similique in inventore veritatis repellendus harum eos fugiat!
               </p>
-              <a href="">Skills</a>
+              <a href="listagem_estudante.php">Estudantes</a>
               <a href="">Expirience</a>
               <a href="">Education</a>
             </div>

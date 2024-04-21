@@ -17,7 +17,7 @@ require '../controller/CertificadoController.php';
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
-                    <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
+
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
                     <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
@@ -28,6 +28,7 @@ require '../controller/CertificadoController.php';
 <div class="front">
         <?php foreach ($certificado as $certificad): ?>
 
+        <a href="lista_certificado_individual.php?id=<?php echo $certificad->id_estudante;?>">
         <div class="listagem">
 
         <h3><?= $certificad -> nome ?></h3>
@@ -38,6 +39,10 @@ require '../controller/CertificadoController.php';
         <p>Matematica: <?= $certificad -> matematica?></p>
 
         </div>
+        <?php
+            $_SESSION['id_estudant'] = $certificad->id_estudante;
+        ?>
+        </a>
 
         <?php endforeach; ?>
 </div>

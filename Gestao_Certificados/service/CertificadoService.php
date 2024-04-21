@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class CertificadoService{
     private $conexao;
     private  $certificado;
@@ -14,16 +14,29 @@ class CertificadoService{
     }
 
     public function insert(){
+        $query = 'insert into certificado(id_estudante,id_instituicao,id_notas) values(:id_estudante,:id_instituicao,:id_notas)';
+        $stmt = $this ->conexao->prepare($query);
+        $stmt ->bindValue(':id_estudante',$_SESSION['id_estudante'] );
+        $stmt ->bindValue(':id_instituicao',$_SESSION['id']);
+        $stmt ->bindValue(':email',$_SESSION['id_notas']);
 
     }
 
     public function recover(){
-        $query = '
-        select c.id,e.nome, e.nascimento,i.nome_instituicao,i.provincia, n.portugues,n.matematica,n.biologia,n.quimica,n.fisica,n.geografia,n.ingles,n.frances,n.historia 
-        from certificado c right join Estudante as e on c.id_estudante=e.id 
-        join instituicao as i on c.id_instituicao=i.id
-        join notas n on c.id_notas=n.id;';
+        $query = 'select * from certificado inner join Estudante on certificado.id_estudante = Estudante.id inner join instituicao on certificado.id_instituicao = instituicao.id inner join notas on certificado.id_notas = notas.id where certificado.id_instituicao = :id_instituicao order by Estudante.nome;';
+        
         $stmt = $this->conexao->prepare($query);
+        $stmt ->bindValue(':id_instituicao', $_SESSION['id']);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function recoverById(){
+        $query = 'select * from certificado inner join Estudante on certificado.id_estudante = Estudante.id inner join instituicao on certificado.id_instituicao = instituicao.id inner join notas on certificado.id_notas = notas.id where certificado.id_estudante= :id_estudant;';
+        
+        $stmt = $this->conexao->prepare($query);
+        $stmt ->bindValue(':id_estudant', $_SESSION['id_estudant']);
+        //$stmt -> bindValue(':id_estudante', $_SESSION['id_estudante']);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }

@@ -148,7 +148,11 @@ fieldset {
   padding: 1em;
   border: 1px solid #ccc;
   background: #f8f8f8;
-  margin: 10px 0px;
+  width: 200px;
+  height: 200px;
+  margin-top: -60px;
+  margin-bottom: 30px;
+  border-radius: 100%;
 }
 
 legend {
@@ -193,8 +197,19 @@ fieldset #instituicao input[type="text"] {
 
 div .listagem {
   background-color: blue;
+  text-decoration: none;
   color: white;
   width: 550px;
   height: 150px;
   margin: 10px;
 }
+
+.listagemunica {
+  background-color: blue;
+  color: white;
+  width: 600px;
+  height: 800px;
+  margin: 10px;
+}
+
+

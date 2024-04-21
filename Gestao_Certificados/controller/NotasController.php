@@ -21,6 +21,7 @@
      $conexao = new Conexao();
      $notasService = new NotasService($conexao,$notas);
      $notasService->insert();
+     header('Location: ../templates/index.php');
      }else if($acao == 'recuperar'){
         
           $notas = new Notas();

@@ -1,6 +1,7 @@
 <?php
     $acao = 'recuperar';
     require '../controller/Estudantecontroller.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
-                    <li><a href="../templates/form_instituicao.php">Instituicao</a></li>
+
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
                     <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
@@ -39,6 +40,12 @@
 
         <p><?= $estudant->ano_conclusao ?></p>
 
+        <div class="botao">
+            <a href="form_notas.php?id=<?php echo $estudant->id;?>">Adicionar Notas</a>
+            <?php
+             $_SESSION['id_estudante'] = $estudant ->id;
+            ?>
+        </div>
         </div>
 
         <?php endforeach; ?>

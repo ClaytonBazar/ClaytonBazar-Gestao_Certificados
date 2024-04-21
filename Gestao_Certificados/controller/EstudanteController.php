@@ -16,6 +16,7 @@ $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
     $conexao = new Conexao();
     $estudanteService = new EstudanteService($conexao,$estudante);
     $estudanteService->insert();
+    header('Location: ../templates/form_estudante.php');
 
     }else if($acao == 'recuperar'){
         

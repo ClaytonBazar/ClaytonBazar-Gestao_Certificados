@@ -1,17 +1,14 @@
-
 <?php
-    $acao = 'recuperar';
-    require '../controller/Notascontroller.php';
- 
+$acao = 'recuperarunico';
+require '../controller/CertificadoController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-
+    <title>Certificado</title>
 </head>
 <body>
 <div id="container">
@@ -20,6 +17,7 @@
             <nav>
                 <ul>
                     <li><a href="../templates/index.php">Home</a></li>
+                   
                     <li><a href="../templates/form_estudante.php">Estudantes</a></li>
                     <li><a href="../templates/form_notas.php">Notas</a></li>
                     <li><a href="../templates/listagem_certificado.php">Certificados</a></li>
@@ -28,43 +26,33 @@
             </nav>
         </header>
 <div class="front">
-    
-        <form method="post" action="../controller/Notascontroller.php?acao=inserir">
-            <fieldset>
-                <legend>Notas do Estudante</legend>
-                <label for="">Portugues</label>
-                <input type="text" name="portugues" id="">
-    
-                <label for="">Matematica</label>
-                <input type="text" name="matematica" id="">
-    
-                <label for="">Quimica</label>
-                <input type="text" name="quimica" id="">
-    
-                <label for="">Biologia</label>
-                <input type="text" name="biologia" id="">
-    
-                <label for="">Fisica</label>
-                <input type="text" name="fisica" id="">
-    
-                <label for="">Geografia</label>
-                <input type="text" name="geografia" id="">
-    
-                <label for="">Ingles</label>
-                <input type="text" name="ingles" id="">
-    
-                <label for="">Historia</label>
-                <input type="text" name="historia" id="">
-    
-                <label for="">Frances</label>
-                <input type="text" name="frances" id="">
-    
-                <label for="">Filosofia</label>
-                <input type="text" name="filosofia" id="">
-    
-                <input type="submit" value="Enviar" >
-            </fieldset>
-        </form>
+        <?php foreach ($certificado as $certificad): ?>
+
+        <div class="listagemunica">
+
+        <h3>Nome do Estudante:<?= $certificad -> nome ?></h3>
+        <p>Data de Nascimento: <?= $certificad->nascimento ?></p>
+        <p>Instituicao: <?= $certificad->nome_instituicao ?></p>
+        <p>Provincia: <?= $certificad->provincia ?></p>
+        <p>Matematica: <?= $certificad -> matematica?></p>
+        <p>Portugues: <?= $certificad -> portugues?></p>
+        <p>Quimica: <?= $certificad -> quimica?></p>
+        <p>Biologia: <?= $certificad -> biologia?></p>
+        <p>Fisica: <?= $certificad -> fisica?></p>
+        <p>Geografia: <?= $certificad -> geografia?></p>
+        <p>Ingles: <?= $certificad -> ingles?></p>
+        <p>Historia: <?= $certificad -> historia?></p>
+        <p>Frances: <?= $certificad -> frances?></p>
+        <p>Filosofia: <?= $certificad -> filosofia?></p>
+        
+
+        </div>
+
+
+
+        <?php endforeach; ?>
+
+        <button type="button" >Gerar Certificado</button>
 </div>
     <aside>
         <h3>Direccao do Ministerio</h3>
@@ -106,6 +94,6 @@
                 2024 <a href="index.php">Escolar Certificados</a> - Todos os direitos reservados pelo MINEDH
             </p>
      </footer>
-</div>
+     </div>
 </body>
 </html>
